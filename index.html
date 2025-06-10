@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Sandy Manein</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-nav::after {
+            width: 100%;
+        }
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Sandy Manein</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active-nav text-gray-700 hover:text-blue-500 transition">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-500 transition">About</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-500 transition">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-500 transition">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-500 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 border-t border-gray-200">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-500 transition">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-500 transition">About</a>
+            <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-500 transition">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-blue-500 transition">Projects</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-500 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl sm:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Sandy Manein</span></h1>
+                <h2 class="text-2xl sm:text-3xl font-semibold mb-6 text-gray-600">Mahasiswa Teknik Elektro</h2>
+                <p class="text-lg text-gray-600 mb-8">Berfikir sistemmatis, bertindak cerdas, berkembang tanpa henti</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition duration-300">
+                        Contact Me
+                    </a>
+                    <a href="#projects" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
+                        View Work
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-20 blur-xl"></div>
+                    <img src="26fb8b9e-a8a4-4fbe-bc2b-93d46dc6d764.jpg" 
+                         alt="Profile" 
+                         class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="col-span-2">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-gray-600 mb-6">
+                        Halo, perkenalkan saya Sandy, mahasiswa semester 4 dari Program Studi Informatika, Fakultas Teknik Elektro di Universitas Pembangunan Indonesia Manado. Saat ini saya sedang fokus mendalami berbagai mata kuliah seperti pemrograman, struktur data, jaringan komputer, dan sistem digital.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Saya memiliki minat di bidang pengembangan perangkat lunak, keamanan sistem, dan teknologi berbasis AI. Dengan semangat belajar dan berkembang, saya siap berkontribusi dalam dunia teknologi yang terus bergerak maju.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-medium"><span class="text-gray-500">Name:</span> Sandy Manein
+                            <p class="font-medium"><span class="text-gray-500">Email:</span> sandymanein@gmail.com</p>
+                        </div>
+                        <div>
+                            <p class="font-medium"><span class="text-gray-500">From:</span> Bahu, Kec. Malalayang</p>
+                            <p class="font-medium"><span class="text-gray-500">Nim:</span> 23201000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-6">My Experience</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-medium">Software Developer</h4>
+                            <p class="text-sm text-gray-500">Mini Aplikasi Web • 2024 - Sekarang</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Asisten Praktikum Pemograman Dasar</h4>
+                            <p class="text-sm text-gray-500">Membantu Mahasiswa tingkat awal
+                                memahami dasar-dasar coding dengan python dan c++ • 2024-2025</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Anggota Divisi IT</h4>
+                            <p class="text-sm text-gray-500">Himpunan Mahasiswa Teknik Elektro • 2023 - 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="progress-bar bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="progress-bar bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">React</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="progress-bar bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Backend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Node.js</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="progress-bar bg-indigo-600 h-2.5 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="progress-bar bg-indigo-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Databases</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="progress-bar bg-indigo-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-xl font-semibold mb-6 text-center">Other Skills</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700">UI/UX Design</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700">Git</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700">Docker</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700">AWS</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700">Agile</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700">Testing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-600">Here are some of my recent works</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 card-hover">
+                    <div class="h-48 bg-blue-500 flex items-center justify-center">
+                        <i class="fas fa-project-diagram text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">A full-featured online shopping platform with payment integration and inventory management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">React</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-800 rounded">Node.js</span>
+                            <span class="text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 card-hover">
+                    <div class="h-48 bg-indigo-500 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-600 mb-4">A powerful data visualization tool that helps businesses track key metrics and make data-driven decisions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Vue.js</span>
+                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded">Python</span>
+                            <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-800 rounded">D3.js</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 card-hover">
+                    <div class="h-48 bg-purple-500 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mobile Social App</h3>
+                        <p class="text-gray-600 mb-4">A cross-platform social networking application with real-time messaging and content sharing.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">React Native</span>
+                            <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">Firebase</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-800 rounded">GraphQL</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-600">Feel free to contact me for job opportunities, projects, or just to say hello!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">sandymanein@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-600">+62 (853) 9428-9712</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-600">Bahu, Kec. Malalayang</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-xl font-semibold mb-6">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-blue-400 hover:text-white transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-800 hover:text-white transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-pink-500 hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition duration-300 w-full">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Sandy Manein</h3>
+                    <p class="text-gray-400">Berfikir sistemmatis, bertindak cerdas, berkembang tanpa henti.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> sandymanein@gmail.com</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +62 (853) 9428-9712</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Bahu, Kec. Malalayang</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 sandymanein. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active-nav');
+                });
+                this.classList.add('active-nav');
+            });
+        });
+
+        // Highlight active section in navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+
+        // Animate progress bars when they come into view
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        function animateProgressBars() {
+            progressBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                if (rect.top <= window.innerHeight - 100) {
+                    bar.style.width = bar.style.width;
+                }
+            });
+        }
+
+        // Run once on load
+        animateProgressBars();
+
+        // Run on scroll
+        window.addEventListener('scroll', animateProgressBars);
+    </script>
+</body>
+</html>
